@@ -17,7 +17,7 @@
             /* 画面中央に固定 */
             transform: translateY(-50%) translateX(16px);
             /* 中央配置と右ずらし */
-            background: #008acb;
+            background: #9bc9d6;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -54,7 +54,7 @@
             font-size: 24px;
             /* 矢印をさらに大きく */
             position: absolute;
-            left: -0px;
+            left: 2px;
             /* 左端に寄せる */
             top: 13px;
             /* さらに下へ */
@@ -82,7 +82,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #e7e7e7;
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -104,15 +104,15 @@
         }
 
         h1 {
-            background: linear-gradient(135deg, #008acb, #006696);
+            background: linear-gradient(135deg, #9bc9d6, #6aafc0);
             color: white;
             padding: 20px;
-            border-radius: 0 15px 0px 45px;
+            border-radius: 0 0px 0px 0px;
             text-align: center;
             display: block;
             margin: -20px -15px 20px -15px;
             font-size: 26px;
-            font-weight: 600;
+            font-weight: 100;
             box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
@@ -120,36 +120,58 @@
 
         .label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             padding: 3px;
-            font-weight: 600;
-            background-color: #008acb;
-            color: white;
-            border-radius: 6px;
+            font-weight: 400;
+            background-color: #9bc9d6;
+            color: #ffffff;
+            border-radius: 0px;
             font-size: 18px;
             text-align: center;
-            /* 中央揃え */
             text-indent: 20px;
-            /* テキストを右に20pxずらす */
             position: relative;
             overflow: hidden;
+            border-top: 1px solid black;
+            /* 上の線 */
+            border-bottom: 1px solid black;
+            /* 下の線 */
+        }
+
+        .labeltyuuou {
+            display: block;
+            margin-bottom: 20px;
+            padding: 3px;
+            background-color: #9bc9d6;
+            color: #ffffff;
+            border-radius: 0px;
+            font-size: 18px;
+            text-align: center;
+            text-indent: 0px;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid black;
+            /* 上の線 */
+            border-bottom: 1px solid black;
+            /* 下の線 */
         }
 
         .labelContent {
             display: block;
             margin-bottom: 10px;
             padding: 3px;
-            font-weight: 600;
-            background-color: #008acb;
-            color: white;
-            border-radius: 6px;
+            font-weight: 400;
+            background-color: #ffffff;
+            color: rgb(20, 20, 20);
+            border-radius: 0px;
             font-size: 18px;
             text-align: center;
-            /* 中央揃え */
             text-indent: 0px;
-            /* テキストを右に20pxずらす */
             position: relative;
             overflow: hidden;
+            border-top: 1px solid black;
+            /* 上の線 */
+            border-bottom: 1px solid black;
+            /* 下の線 */
         }
 
         /* 必須マークのスタイル */
@@ -164,12 +186,12 @@
             align-items: center;
             justify-content: center;
             background: white;
-            color: #13ca5e;
+            color: #9bc9d6;
             font-weight: bold;
             font-size: 0.9em;
             border-radius: 4px;
             padding: 2px 6px;
-            border: 2px solid #13ca5e;
+            border: 2px solid #9bc9d6;
         }
 
         input[type="text"],
@@ -177,16 +199,20 @@
         textarea {
             width: 100%;
             padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #555555;
+            border-radius: 3px;
             box-sizing: border-box;
             font-size: 16px;
             transition: all 0.3s;
+
+            /* 以下を追加 */
+            position: relative;
+            top: -5px;
+            /* ← 上に5pxずらす（数値調整OK） */
         }
 
         .visit-buttons,
-        .second-buttons,
         .symptoms,
         .menu-sections,
         .irradiations {
@@ -197,13 +223,12 @@
         }
 
         .visit-buttons button,
-        .second-buttons button,
         .symptoms button,
         .menu-sections button,
         .irradiations button {
             flex: 1;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #2e2e2e;
             border-radius: 4px;
             background-color: #f7f7f7;
             cursor: pointer;
@@ -213,12 +238,11 @@
         }
 
         .visit-buttons button.active,
-        .second-buttons button.active,
         .symptoms button.active,
         .menu-sections button.active,
         .irradiations button.active {
-            background-color: #444;
-            color: #fff;
+            background-color: #ffffff;
+            color: #141414;
         }
 
         .date-inputs input[type="datetime-local"] {
@@ -279,7 +303,7 @@
             width: auto;
             /* 通常のセルは自動調整 */
             box-sizing: border-box;
-            border: 2px solid #696969;
+            border: 1px solid #1a1a1a;
         }
 
         .calendar th:first-child,
@@ -299,7 +323,7 @@
         }
 
         .calendar td.selected {
-            background-color: #13ca5e;
+            background-color: #3e3f41;
             color: #fff;
         }
 
@@ -313,9 +337,10 @@
 
         .week-button {
             padding: 10px 20px;
-            background-color: #444444;
-            color: #fff;
-            border: none;
+            background-color: #ffffff;
+            color: #222222;
+            border: 1px solid black;
+            /* ← 外枠を黒1pxに設定 */
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
@@ -323,14 +348,12 @@
         }
 
         .week-button:hover {
-            background-color: #444444;
+            background-color: #ffffff;
             transform: scale(1.15);
-            /* ドーン！ってくらい拡大🔥 */
         }
 
         .week-button:active {
             transform: scale(0.95);
-            /* クリックした瞬間にギュッと縮む💥 */
         }
 
         .month-button-container {
@@ -343,28 +366,29 @@
 
         .month-button {
             padding: 10px 20px;
-            background-color: #444;
-            color: #fff;
-            border: none;
+            background-color: #ffffff;
+            color: #222222;
+            border: 1px solid black;
+            /* ← 外枠を黒1pxに設定 */
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            transform-origin: center center;
         }
 
         .month-button:hover {
-            background-color: #444444;
+            background-color: #ffffff;
             transform: scale(1.15);
-            /* ドーン！ってくらい拡大🔥 */
         }
 
         .month-button:active {
             transform: scale(0.95);
-            /* クリックした瞬間にギュッと縮む💥 */
         }
 
         .current-month {
             font-size: 16px;
-            font-weight: bold;
-            color: #444;
+            font-weight: 300;
+            color: #3e3f41;
             margin-top: 20px;
             /* 下にずらす */
             display: inline-block;
@@ -452,10 +476,19 @@
         }
 
         #treatment-text {
-            background-color: #eef9f5;
-            padding: 0px;
-            border-radius: 0px;
-            margin-top: 0px;
+            background-color: #f9f9f9;
+            padding: 16px 20px;
+            border: 1px solid #000000;
+            border-top: none;
+            /* ← 上の横線を非表示 */
+            border-radius: 0 0 3px 3px;
+            /* ← 上の角の丸みをなくして自然に */
+            margin-top: -13px;
+            /* ← 少し上に詰める */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            font-size: 15px;
+            line-height: 1.6;
+            color: #000000;
         }
 
         .highlight-background {
@@ -469,13 +502,6 @@
             /* コンテナ内の要素を中央に配置 */
         }
 
-        .highlight-text {
-            display: block;
-            font-weight: bold;
-            text-align: center;
-            /* テキストを中央揃えにする */
-        }
-
         .red-circle {
             color: red;
             /* 赤色に設定 */
@@ -487,30 +513,32 @@
         }
 
         .info-text {
-            margin-top: 20px;
-            /* 上の余白 */
-            margin-bottom: 10px;
-            /* 下に白い隙間を追加 */
+            position: relative;
+            /* ← 上下移動を有効にする */
+            top: -20px;
+            /* ← 上に8pxずらす（数値調整可） */
+            margin-top: 0;
+            /* ← 上のマージンは0にしておくと自然 */
+            margin-bottom: 0px;
             font-size: 13px;
             color: #000000;
             line-height: 1.5;
             text-align: center;
             word-wrap: break-word;
-            background-color: #eef9f5;
-            /* 青っぽい背景色を追加 */
-            padding: 10px;
-            border-radius: 4px;
+            background-color: #f3f3f3;
+            padding: 0px;
+            border-radius: 0 0 4px 4px;
+            border: 1px solid black;
+            border-top: none;
         }
 
-        /* 携帯端末向けのレスポンシブデザイン */
+        /* スマホ対応 */
         @media (max-width: 768px) {
             .info-text {
                 font-size: 11.5px;
-                /* スマホでは少し小さく */
-                margin-top: 10px;
-                /* 上下のマージンを調整 */
+                top: -20px;
+                /* ← モバイルでは少し控えめに上にずらす */
                 line-height: 2.0;
-                /* テキストの高さ調整 */
             }
         }
 
@@ -526,9 +554,9 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #000000;
             border-radius: 4px;
-            background-color: #f7f7f7;
+            background-color: #ffffff;
             cursor: pointer;
             box-sizing: border-box;
             text-align: center;
@@ -537,13 +565,13 @@
 
         .symptoms button.active,
         .options button.active {
-            background-color: #444;
-            color: #fff;
+            background-color: #ffffff;
+            color: #000000;
         }
 
         .highlight-background {
             cursor: pointer;
-            background-color: #008acb;
+            background-color: #9bc9d6;
             padding: 10px;
             border-radius: 6px;
             font-size: 18px;
@@ -563,18 +591,11 @@
             /* ボタンを縦並びに */
         }
 
-        .highlight-text {
-            font-weight: bold;
-            display: inline-block;
-            color: #fff;
-            /* オプションテキストの色 */
-        }
-
         .info-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: -5px 0;
+            margin: -6px 0;
         }
 
         hr {
@@ -582,31 +603,30 @@
         }
 
         .edit-button {
-            background-color: #ff6b6b;
-            color: #fff;
-            border: none;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border: 1px solid black;
+            /* ← 外枠を黒1pxに設定 */
             border-radius: 5px;
             padding: 5px 10px;
             cursor: pointer;
             transition: background-color 0.3s;
             white-space: nowrap;
             /* 改行を防ぐ */
-            width: 80px;
-            /* 横幅を固定 */
+            width: auto;
             text-align: center;
-            /* テキストを中央揃え */
         }
 
         .edit-button:hover {
-            background-color: #ff4f4f;
+            background-color: #9bc9d6;
+            color: #ffffff;
         }
-
 
         /* 100点の予約フォームCSS */
 
         input:focus,
         textarea:focus {
-            border-color: #008acb;
+            border-color: #9bc9d6;
             outline: none;
             box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
         }
@@ -615,7 +635,7 @@
             padding: 12px;
             border: none;
             border-radius: 6px;
-            background-color: #008acb;
+            background-color: #3e3f41;
             color: #000000;
             font-size: 16px;
             cursor: pointer;
@@ -631,11 +651,13 @@
             width: 100%;
             padding: 15px;
             font-size: 18px;
-            background-color: #008acb;
+            background-color: #9bc9d6;
+            margin-top: 12px;
+            /* ← ここで下方向にずらす */
         }
 
         .submit-button:hover {
-            background-color: #008acb;
+            background-color: #6aafc0;
         }
 
         @media (max-width: 768px) {
@@ -654,9 +676,11 @@
         }
 
         button.active {
-            outline: 2px solid #696969;
+            outline: 1px solid #2b2b2b;
             /* ここで枠線を指定 */
             outline-offset: 2px;
+    /* 外側に色を追加 */
+    box-shadow: 0 0 0 3px #9bc9d6
         }
 
         /* 必須マークのスタイル */
@@ -684,7 +708,7 @@
             left: 50%;
             transform: translate(-50%, -10px);
             /* Y方向に上げる */
-            background-color: #008acb;
+            background-color: #3e3f41;
             color: #fff;
             padding: 3px 12px;
             /* ボックスのパディングを縮小 */
@@ -692,7 +716,7 @@
             /* 角の丸みを少し減少 */
             font-size: 1.4rem;
             /* フォントサイズを小さく */
-            font-weight: bold;
+            font-weight: 300;
             box-shadow: 0 2px 6px rgba(47, 103, 167, 0.2);
             /* 影も控えめに */
         }
@@ -732,71 +756,103 @@
             margin-top: 30px;
         }
 
-.menu-sections button {
-    flex-grow: 1;
-    padding: 10px;
-    height: 42px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f7f7f7;
-    cursor: pointer;
-    box-sizing: border-box;
-    text-align: center;
-    white-space: nowrap;
-    min-width: 100%;
-    margin: 3px; /* ← ここ追加！隙間できるよ〜 */
-}
-
-@media (max-width: 600px) {
-    .menu-sections button {
-        flex-basis: calc(50% - 10px);
-    }
-}
-
-@media (max-width: 400px) {
-    .menu-sections button {
-        flex-basis: 100%;
-    }
-}
-
-        .datetime-input {
-            width: 100%;
-            padding: 15px;
-            /* サイズを大きく調整 */
-            font-size: 18px;
-            /* フォントサイズを大きく */
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
+        .repeat-booking-wrapper {
+            text-align: center;
+            margin: 20px 0;
         }
 
-        .datetime-input:focus+.datetime-placeholder,
-        .datetime-input:not(:placeholder-shown)+.datetime-placeholder {
-            visibility: hidden;
-            opacity: 0;
+        #repeatBookingButton {
+            background-color: #f7f7f7;
+            color: #000000;
+            border: 1px solid #000000;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        #menuserect,
-        #menuSections {
-            display: none;
+        #repeatBookingButton:hover {
+            background-color: #f1f1f1;
+            color: #000000;
         }
 
-#selected-menus-display {
-  display: none; /* 最初は非表示 */
-  font-weight: bold;
-  margin-top: 12px;
-  padding: 12px 16px;
-  background-color: #f5f5f5;
-  border-left: 4px solid #008acb;
-  border-radius: 6px;
-  font-size: 16px;
-  color: #333;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  word-break: break-word;
-}
+        /* 組み合わせ選択の案内 */
+        .combine-hint {
+            font-size: 13px;
+            color: #d13b3b;
+            text-align: center;
+            line-height: 1.5;
+            margin: -10px 0 14px;
+        }
+
+        /* 選択中メニューのナビ表示エリア */
+        .selection-nav {
+            background-color: #f4fafb;
+            border: 1px solid #9bc9d6;
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-bottom: 14px;
+        }
+
+        .sel-nav-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3e6b74;
+            margin-bottom: 8px;
+        }
+
+        .sel-chip-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .sel-chip {
+            display: inline-flex;
+            align-items: center;
+            background-color: #ffffff;
+            border: 1px solid #9bc9d6;
+            border-radius: 16px;
+            padding: 5px 8px 5px 10px;
+            font-size: 13px;
+            color: #222;
+            line-height: 1.3;
+        }
+
+        .sel-chip-cat {
+            background-color: #9bc9d6;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 10px;
+            padding: 1px 7px;
+            margin-right: 6px;
+            white-space: nowrap;
+        }
+
+        .sel-chip-x {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 7px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #eef4f5;
+            color: #6a8b92;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .sel-chip-x:hover {
+            background-color: #ff4c4c;
+            color: #ffffff;
+        }
     </style>
 </head>
-
 
 <body>
     <!-- 右側の追従ナビ -->
@@ -808,158 +864,151 @@
     </div>
 
     <div class="container">
-        <h1 class="title">SUBE SUBE<br>予約フォーム</h1>
+        <h1><span style="font-size: 1em; font-weight: 300; display: block; letter-spacing: 0.05em;">ヘアーサロン ヤング</span>エイジングケアサロンcoco<br>予約フォーム
+        </h1>
+        <!-- 追加するボタン -->
+        <div class="repeat-booking-wrapper">
+            <button type="button" id="repeatBookingButton" onclick="applyPreviousSelection()">
+                🔁 前回と同じメニューで予約する
+            </button>
+        </div>
+
         <div class="label">お客様名<span class="required">必須</span></div>
+
         <input type="text" id="name" placeholder="お名前を入力してください" oninput="saveInput('name')">
 
         <div class="label">電話番号<span class="required">必須</span></div>
         <input type="tel" id="phone" placeholder="電話番号を入力してください" oninput="saveInput('phone')">
 
         <div class="label">ご来店回数<span class="required">必須</span></div>
-        <div class="second-buttons">
-            <button type="button" id="firstsecondanniversary" onclick="selectsecondanniversary(this)">初回</button>
-            <button type="button" id="repeatsecondanniversary" onclick="selectsecondanniversary(this)">2回目以降</button>
+        <div class="visit-buttons">
+            <button type="button" id="firstVisit" onclick="selectVisit(this)">1回目</button>
+            <button type="button" id="repeatVisit" onclick="selectVisit(this)">2回目以降</button>
         </div>
 
-        <div class="label" id="menuLabel">メニューをお選びください<span class="required">必須</span></div>
+        <div class="label" id="course">メニューをお選びください<span class="required">必須</span></div>
         <div class="info-text">※メニューを選択すると<br>空き状況のカレンダーが表示されます</div>
-        <div class="menu-sections" id="menuSections">
-            <button type="button" onclick="showMenu('male')">耳つぼジュエリー</button>
-            <button type="button" onclick="showMenu('malenew')">脱毛メニュー</button>
-            <button type="button" onclick="showMenu('female')">歯のホワイトニングメニュー</button>
-            <button type="button" onclick="showMenu('eyebrow')">眉毛メニュー</button>
-            <button type="button" onclick="showMenu('whiteningmale')">フェイシャルメニュー</button>
-            <button type="button" onclick="showMenu('whiteningfemale')">ボディメニュー</button>
+        <div class="menu-sections">
+            <button type="button" onclick="showMenu('mens')">メンズメニュー</button>
+            <button type="button" onclick="showMenu('mensfacial')">メンズフェイシャル</button>
+            <button type="button" onclick="showMenu('menshead')">メンズヘッドスパ</button>
+            <button type="button" onclick="showMenu('ladies')">レディースメニュー</button>
+            <button type="button" onclick="showMenu('treatment')">トリートメント</button>
+            <button type="button" onclick="showMenu('young')">ヤングメニュー</button>
         </div>
 
-<!-- メニュー表示エリア（選択されたメニュー名がここに出る） -->
-<div id="selected-menus-display" style="display: none; font-weight: bold; margin-top: 10px;"></div>
+        <div class="combine-hint">※レディース・トリートメント・ヤングは<br><strong>組み合わせて複数選択できます</strong></div>
+
+        <!-- 選択中メニューのナビ表示エリア（複数選択の内容を常時表示） -->
+        <div id="selectionNav" class="selection-nav" style="display: none;"></div>
 
         <div id="treatment-text" style="display: none; margin-bottom: 10px;"></div>
 
-        <div id="femalenew" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">ネイルメニュー</span>
+        <!-- メンズメニュー -->
+        <div id="mens" class="menu-section">
+            <div class="labeltyuuou">
+                <span class="highlight-text">担当指名</span>
+            </div>
+            <div class="visit-buttons shimei-buttons" id="shimeiButtons">
+                <button type="button" onclick="selectShimei(this)">葛西博之</button>
+                <button type="button" onclick="selectShimei(this)">葛西由紀</button>
+                <button type="button" onclick="selectShimei(this)">指名なし</button>
+            </div>
+            <div class="labeltyuuou">
+                <span class="highlight-text">◆メンズメニュー◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="ネイルメニュー" data-price="15000">one color ￥4800</button>
-                <div class="info-text">ワンカラー¥4800<br>ワンカラーの価格です♪</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="ネイルメニュー" data-price="15000">simple art ￥5300</button>
-                <div class="info-text">シンプルアート¥5300<br>ご希望のアートは事前にLINEください♪</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="ネイルメニュー" data-price="15000">parts S ￥150</button>
-                <div class="info-text">parts S ￥150<br>豊富なパーツをご用意★</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="ネイルメニュー" data-price="15000">parts L ￥250</button>
-                <div class="info-text">parts L ￥250<br>豊富なパーツをご用意★</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="ネイルメニュー" data-price="15000">design seal ￥150</button>
-                <div class="info-text">design seal ￥150<br>豊富なパーツをご用意★</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="ネイルメニュー" data-price="15000">長さだし ￥250</button>
-                <div class="info-text">長さだし ￥250<br>1本の価格です</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="ネイルメニュー" data-price="15000">他店オフ ￥400</button>
-                <div class="info-text">他店オフ ￥400<br>両手で800円</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="ネイルメニュー" data-price="15000">ネイルケア　¥2500</button>
-                <div class="info-text">ネイルケア　¥2500</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="ネイルメニュー" data-price="15000">ネイルオフ　¥2,500</button>
-                <div class="info-text">ネイルオフ　¥2,500</div>
+                <button type="button" onclick="selectSymptom(this, 'mens_cut')" data-price="0" data-category="mens">男性カット(シャンプー、シェーブ込み)　約75分</button>
+                <button type="button" onclick="selectSymptom(this, 'mens_color')" data-price="0" data-category="mens">男性カラー(カット、シェーブ込み)　約150分</button>
+                <button type="button" onclick="selectSymptom(this, 'mens_perm')" data-price="0" data-category="mens">男性パーマ(カット、シェーブ込み) 約150分</button>
+                <button type="button" onclick="selectSymptom(this, 'kids_cut')" data-price="0" data-category="mens">子供カット(シャンプー、シェーブ込み)　約60分</button>
+            </div>
+            <div class="labeltyuuou">
+                <span class="highlight-text">オプション</span>
+            </div>
+            <div class="irradiations">
+                <button type="button" id="mens_opt_headspa" onclick="selectirradiations(this)" data-price="0">ヘッドスパ　+約20分</button>
             </div>
         </div>
 
-        <div id="male" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">◆耳つぼジュエリー◆</span>
+        <!-- レディースメニュー -->
+        <div id="ladies" class="menu-section">
+            <div class="labeltyuuou">
+                <span class="highlight-text">◆レディースメニュー◆</span>
             </div>
             <div class="symptoms">
-        <div class="info-text">つけ放題は3500円★<br>他メニューと併用で500円オフ♪<br>月2回以上ご来店の方は、<br>１ヶ月通い放題5000円がおすすめ！</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="耳つぼジュエリー" data-price="15000">両耳10個まで</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="耳つぼジュエリー" data-price="15000">両耳つけ放題</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="耳つぼジュエリー" data-price="15000">1ヶ月通い放題</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="耳つぼジュエリー" data-price="15000">2回目以降</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="耳つぼジュエリー" data-price="15000">他メニューと併用￥500オフ</button>
+                <button type="button" onclick="selectSymptom(this, 'ladies_steam')" data-price="0" data-category="ladies">スチームシェービング　約40分</button>
+                <button type="button" onclick="selectSymptom(this, 'ladies_lymph')" data-price="0" data-category="ladies">リンパケアエステ　約20分</button>
+                <button type="button" onclick="selectSymptom(this, 'ladies_core')" data-price="0" data-category="ladies">コアエクササイズ　約50分</button>
+                <button type="button" onclick="selectSymptom(this, 'ladies_kori')" data-price="0" data-category="ladies">お顔のコリほぐし 約15分</button>
+                <button type="button" onclick="selectSymptom(this, 'ladies_seijin')" data-price="0" data-category="ladies">成人式シェービング　約60分</button>
+                <button type="button" onclick="selectSymptom(this, 'ladies_clear')" data-price="0" data-category="ladies">クリアトリートメント　約60分</button>
             </div>
-        </div>
-        
-        <div id="malenew" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">◆脱毛メニュー◆</span>
+            <div class="labeltyuuou">
+                <span class="highlight-text">オプション</span>
             </div>
-            <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【 お顔脱毛 × ハリウッドブロウリフト 】</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】全身脱毛</button>
-        <div class="info-text">全身脱毛：18000円〜<br>学割20%オフ♪男性は21000円です。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】お顔の各パーツ</button>
-                <div class="info-text">お顔の各パーツ：1000円〜<br>学割20%オフ♪男性は+500円です。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】お顔セット</button>
-                <div class="info-text">お顔セット：4000円〜<br>学割20%オフ♪男性は6000円です。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】おひげセット</button>
-                <div class="info-text">おひげセット：5000円〜<br>学割20%オフ♪お好きな形に残すこともできます。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】わき/肩/うなじ</button>
-                <div class="info-text">わき/肩/うなじ：1500円〜<br>学割20%オフ♪男性は+500円です。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】ひじ上/ひじ下</button>
-                <div class="info-text">ひじ上/ひじ下：2000円〜<br>学割20%オフ♪男性は+500円です。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】ひざ上/ひざ下/背中</button>
-                <div class="info-text">ひざ上/ひざ下/背中：3000円〜<br>学割20%オフ♪男性は+500円です。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】手足指・甲/耳/へそまわりひざ小僧/乳輪など</button>
-                <div class="info-text">手足指・甲/耳/へそまわりひざ小僧/乳輪など：1000円〜<br>学割20%オフ♪男性は+500円です。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】胸/お腹/ヒップ</button>
-                <div class="info-text">胸/お腹/ヒップ：2300円〜<br>学割20%オフ♪男性は+500円です。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】Ｖ/Ｉ/Ｏ</button>
-                <div class="info-text">Ｖ/Ｉ/Ｏ：2000円〜<br>学割20%オフ♪男性は3500円です。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">【光脱毛】ＶＩＯセット</button>
-                <div class="info-text">ＶＩＯセット：4000円〜<br>学割20%オフ♪男性は7000円です。</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">部位脱毛コースの方(30分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">部位脱毛コースの方(60分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="脱毛メニュー" data-price="15000">全身脱毛コースの方</button>
+            <div class="irradiations">
+                <button type="button" id="ladies_opt_core" onclick="selectirradiations(this)" data-price="0">コアエクササイズ　約50分</button>
+                <button type="button" id="ladies_opt_clear" onclick="selectirradiations(this)" data-price="0">クリアトリートメント　約60分</button>
+                <button type="button" id="ladies_opt_lymph" onclick="selectirradiations(this)" data-price="0">リンパケアエステ　約20分</button>
+                <button type="button" id="ladies_opt_kori" onclick="selectirradiations(this)" data-price="0">お顔のコリほぐし 約15分</button>
             </div>
         </div>
 
-        <div id="female" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">◆歯のホワイトニングメニュー◆</span>
+        <!-- トリートメント -->
+        <div id="treatment" class="menu-section">
+            <div class="labeltyuuou">
+                <span class="highlight-text">◆トリートメント◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="歯のホワイトニングメニュー" data-price="15000">6回￥19,800</button>
-                <div class="info-text">歯のホワイトニング：19800円〜<br>効果をしっかり継続させるため6回コースのみ</div>
+                <button type="button" onclick="selectSymptom(this, 'treat_clear')" data-price="0" data-category="treatment">クリアトリートメント　約60分</button>
+                <button type="button" onclick="selectSymptom(this, 'treat_kaizen')" data-price="0" data-category="treatment">髪質改善トリートメント　約120分</button>
             </div>
         </div>
 
-        <div id="eyebrow" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">眉毛メニュー<br>（弥奈指名されてる場合のみ）</span>
+        <!-- ヤングメニュー -->
+        <div id="young" class="menu-section">
+            <div class="labeltyuuou">
+                <span class="highlight-text">◆ヤングメニュー◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="眉毛メニュー" data-price="15000">ハリウッドブロウリフト</button>
-                <div class="info-text">ハリウッドブロウリフト：5000円<br>90分を超える施術は5800円</div>
+                <button type="button" onclick="selectSymptom(this, 'young_eririn')" data-price="0" data-category="young">エリリン　約60分</button>
+                <button type="button" onclick="selectSymptom(this, 'young_miwarin')" data-price="0" data-category="young">ミワリン　約30分</button>
+                <button type="button" onclick="selectSymptom(this, 'young_miwarin_color')" data-price="0" data-category="young">ミワリンカラー　約90分</button>
+                <button type="button" onclick="selectSymptom(this, 'young_hitorin')" data-price="0" data-category="young">ヒトリン　約180分</button>
+                <button type="button" onclick="selectSymptom(this, 'young_mayurin')" data-price="0" data-category="young">マユリン　約150分</button>
+                <button type="button" onclick="selectSymptom(this, 'young_yoshirin')" data-price="0" data-category="young">ヨシリン　約180分</button>
+                <button type="button" onclick="selectSymptom(this, 'young_spa')" data-price="0" data-category="young">スパ　約60分</button>
             </div>
         </div>
 
-        <div id="whiteningmale" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">フェイシャルメニュー<br>（弥奈指名されてる場合のみ）</span>
+        <!-- メンズフェイシャル -->
+        <div id="mensfacial" class="menu-section">
+            <div class="labeltyuuou">
+                <span class="highlight-text">◆メンズフェイシャル◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="フェイシャルメニュー" data-price="15000">角質・毛穴すっきりフェイシャル</button>
-                <div class="info-text">角質・毛穴すっきりフェイシャル：5000円<br>毛穴・角質ケア</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="フェイシャルメニュー" data-price="15000">ニキビケア・肌荒れ改善フェイシャル</button>
-                <div class="info-text">ニキビケア・肌荒れ改善フェイシャル：6500円<br>ニキビケア</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="フェイシャルメニュー" data-price="15000">美白・しみしわ・エイジングケアフェイシャル</button>
-                <div class="info-text">美白・しみしわ・エイジングケアフェイシャル：10000円<br>美白・エイジングケア</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="フェイシャルメニュー" data-price="15000">【ハーブピーリング】<br>ライト版♪マグマハーブ！</button>
-                <div class="info-text">マグマハーブ（ライト版ハーブ）：9800円<br>ハーブピーリングお試し♪</div>
-                <button type="button" onclick="selectSymptom(this)" data-category="フェイシャルメニュー" data-price="15000">10回のエステより1回のハーブ☆<br>本気の肌質改善!【ハーブピーリング】お顔</button>
-                <div class="info-text">ハーブピーリング：22000円〜<br>本気の肌改善♪10回分エステの効果</div>
+                <button type="button" onclick="selectSymptom(this, 'mensfacial_facial')" data-price="0" data-category="mensfacial">お顔の凝りほぐし　約20分</button>
             </div>
         </div>
 
-        <div id="whiteningfemale" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">ボディメニュー<br>（弥奈指名されてる場合のみ）</span>
+        <!-- メンズヘッドスパ -->
+        <div id="menshead" class="menu-section">
+            <div class="labeltyuuou">
+                <span class="highlight-text">担当指名</span>
+            </div>
+            <div class="visit-buttons shimei-buttons" id="shimeiButtonsHead">
+                <button type="button" onclick="selectShimei(this)">葛西博之</button>
+                <button type="button" onclick="selectShimei(this)">葛西由紀</button>
+                <button type="button" onclick="selectShimei(this)">指名なし</button>
+            </div>
+            <div class="labeltyuuou">
+                <span class="highlight-text">◆メンズヘッドスパ◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="ボディメニュー" data-price="15000">10回のエステより1回の【ハーブピーリング】<br>☆本気の肌質改善!  ボディ 1ｇ</button>
-<div class="info-text">ボディハーブピーリング：1g¥11000</div>
+                <button type="button" onclick="selectSymptom(this, 'menshead_headspa')" data-price="0" data-category="menshead">メンズヘッドスパ　約20分</button>
             </div>
         </div>
-
-        <div id="treatment-text" style="display: none; margin-bottom: 10px;"></div>
 
         <div class="label">希望日時<span class="required">必須</span></div>
         <div class="calendar-container">
@@ -998,17 +1047,16 @@
                     </tbody>
                 </table>
             </div>
-
             <div class="loading-spinner" id="loadingSpinner">
                 <div class="spinner"></div>
                 <div class="loading-text">読み込み中...</div>
             </div>
         </div>
 
-        <div class="label">メッセージ<br>（質問等お気軽にご記入ください）</div>
+        <div class="labeltyuuou">メッセージ<br>（質問等お気軽にご記入ください）</div>
         <textarea id="message" rows="4" placeholder="メッセージを入力してください"></textarea>
 
-        <div class="label">ご予約内容</div>
+        <div class="labeltyuuou">ご予約内容</div>
         <div id="displayInfo"></div> <!-- ここに選択された情報を表示します -->
 
         <button class="submit-button" onclick="submitForm()" div id="section-message">予約を行う</button>
@@ -1016,20 +1064,91 @@
 
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <script>
-        let secondanniversaryCount = '';
+        let visitCount = '';
         let selectedMenu = '';
         let selectedSymptom = [];  // 配列として定義
         let selectedFullDate = '';
         let currentDate = new Date();
         let availabilityCache = {};
+        let latestRequestId = 0; // 非同期フェッチの順不同・古いレスポンス対策
+        let inFlightFetches = {}; // 同一週への同時リクエストを共有して重複ネットワーク呼び出しを防ぐ
         let irradiationsCount = ''; <!-- 選択された症状を格納する変数 -->
         let totalAmount = 0; // 合計金額を格納する変数
         let menuPrice = 0; // メニューの価格
         let optionsPrice = 0; // オプションの合計価格
+        let currentCategory = ''; // 現在選択されているカテゴリ（メンズかどうかの判定用）。複数選択時は 'combo'
+        let selectedShimei = ''; // 担当指名（メンズメニューのみ）
+
+        // 選択中メニューの一覧（複数選択対応）。各要素 { id, name, category, menuTime, displayTime, price }
+        let selectedItems = [];
+
+        // 複数選択（組み合わせ）を許可するカテゴリ。すべて由紀レーン・同じ流れで施術できるメニュー。
+        const COMBINABLE_CATEGORIES = ['ladies', 'treatment', 'young'];
+        function isCombinable(cat) { return COMBINABLE_CATEGORIES.indexOf(cat) !== -1; }
+
+        // お部屋（同時1件）を使うメニューのキーワード。複数選択時のお部屋判定に使用。
+        // ※ gas.gs の ROOM_MENU_KEYWORDS と必ず一致させること。
+        //   クリアトリートメントはレディース／トリートメントで名称が同一のため誤検知回避で含めない。
+        const ROOM_MENU_KEYWORDS = ['ヘッドスパ', 'スパ', 'スチームシェービング', '成人式シェービング', 'リンパケアエステ', 'コアエクササイズ', 'お顔のコリほぐし', 'エリリン', 'ミワリン', 'ヒトリン', 'マユリン', 'ヨシリン'];
+
+        // カテゴリ → 表示用ラベル（ナビ・表示エリア用）
+        function categoryLabel(cat) {
+            return ({ mens: 'メンズ', mensfacial: 'メンズフェイシャル', menshead: 'メンズヘッドスパ', ladies: 'レディース', treatment: 'トリートメント', young: 'ヤング' })[cat] || '';
+        }
+        // カテゴリ → コース名ラベル（≒最終受付バケットのキー。gas.gs の LAST_ACCEPTANCE_TIMES キーと対応）
+        function categoryCourseLabel(cat) {
+            return ({ mens: 'メンズメニュー', mensfacial: 'メンズフェイシャル', menshead: 'メンズヘッドスパ', ladies: 'レディースメニュー', treatment: 'トリートメント', young: 'ヤングメニュー' })[cat] || '';
+        }
+
+        // 症状ボタンの onclick から treatmentId を取り出す（例：selectSymptom(this, 'ladies_steam') → 'ladies_steam'）
+        function getSymptomId(button) {
+            const oc = button.getAttribute('onclick') || '';
+            const m = oc.match(/selectSymptom\(this,\s*'([^']+)'\)/);
+            return m ? m[1] : '';
+        }
+
+        // 現在アクティブな全メニューボタンから選択状態（selectedItems 等）を再構築する。
+        // 複数選択（レディース・トリートメント・ヤング）にも対応。
+        function rebuildSelection() {
+            const activeButtons = Array.from(document.querySelectorAll('.symptoms button.active'));
+            selectedItems = activeButtons.map(btn => {
+                const name = btn.textContent;
+                return {
+                    id: getSymptomId(btn),
+                    name: name,
+                    category: btn.getAttribute('data-category') || '',
+                    menuTime: menuTimes[name] || 0,
+                    displayTime: (menuDisplayTimes[name] != null) ? menuDisplayTimes[name] : (menuTimes[name] || 0),
+                    price: parseInt(btn.getAttribute('data-price'), 10) || 0
+                };
+            });
+
+            // 派生状態を更新
+            selectedSymptom = selectedItems.map(it => it.name); // 常に配列（未選択は []）
+            selectedMenuTime = selectedItems.reduce((s, it) => s + it.menuTime, 0);          // 全体時間（全）合計：カレンダーブロック用
+            selectedMenuDisplayTime = selectedItems.reduce((s, it) => s + it.displayTime, 0); // 提供時間（提）合計：所要時間表示用
+            menuPrice = selectedItems.reduce((s, it) => s + it.price, 0);
+
+            // カテゴリ（単一なら該当カテゴリ、複数なら 'combo'）
+            const cats = [];
+            selectedItems.forEach(it => { if (cats.indexOf(it.category) === -1) cats.push(it.category); });
+            currentCategory = selectedItems.length === 1 ? selectedItems[0].category : (selectedItems.length > 1 ? 'combo' : '');
+
+            // コース名（選択があれば選択内容から決定。単一は該当コース名、複数は '＋' 連結）
+            if (selectedItems.length > 0) {
+                selectedMenu = cats.map(categoryCourseLabel).join('＋');
+            }
+
+            // 「前回と同じメニュー」復元用に選択IDを保存
+            localStorage.setItem('selectedSymptoms', JSON.stringify(selectedItems.map(it => it.id)));
+
+            // 選択中メニューのナビ表示を更新
+            updateSelectionNav();
+        }
 
         document.addEventListener('DOMContentLoaded', function () {
             liff.init({
-                liffId: '2006165766-q6BGg0oD'
+                liffId: '2010112862-HWhtC3fz'
             }).then(() => {
                 console.log('LIFF初期化成功');
             }).catch((err) => {
@@ -1039,56 +1158,222 @@
             fetchAvailability(currentDate);
         });
 
-        // 訪問回数ごとの時間設定 (例：初めて=20分、2回目以降=15分)
+        // 訪問回数ごとの時間設定
+        let visitTimes = {
+            '1回目': 0,
+            '2回目以降': 0
+        };
+
+        let selectedVisitTime = 0; // 訪問回数で選択された時間
+
+        // オプションの時間設定
         let irradiationsTimes = {
-            '美白パック〈30分〉': 0
+            'ヘッドスパ　+約20分': 20,
+            'コアエクササイズ　約50分': 50,
+            'クリアトリートメント　約60分': 60,
+            'リンパケアエステ　約20分': 20,
+            'お顔のコリほぐし 約15分': 15
         };
 
-        let selectedirradiationsTime = 0; // 訪問回数で選択された時間
+        let selectedirradiationsTime = 0; // オプションで選択された時間
 
+        // メニューの「全体時間（全）」設定 ＝ カレンダーをブロックする予約枠時間
+        // ※ gas.gs 側の duration 設定と必ず一致させること
         let menuTimes = {
-            '【 お顔脱毛 × ハリウッドブロウリフト 】': 60,
-            '【光脱毛】全身脱毛': 90,
-            '【光脱毛】お顔の各パーツ': 30,
-            '【光脱毛】お顔セット': 60,
-            '【光脱毛】おひげセット': 30,
-            '【光脱毛】わき/肩/うなじ': 30,
-            '【光脱毛】ひじ上/ひじ下': 30,
-            '【光脱毛】ひざ上/ひざ下/背中': 30,
-            '【光脱毛】手足指・甲/耳/へそまわりひざ小僧/乳輪など': 30,
-            '【光脱毛】胸/お腹/ヒップ': 30,
-            '【光脱毛】Ｖ/Ｉ/Ｏ': 30,
-            '【光脱毛】ＶＩＯセット': 30,
-            '部位脱毛コースの方(30分)': 30,
-            '部位脱毛コースの方(60分)': 60,
-            '全身脱毛コースの方': 90,
-            '6回￥19,800': 60,
-            'ハリウッドブロウリフト': 60,
-            '角質・毛穴すっきりフェイシャル': 90,
-            'ニキビケア・肌荒れ改善フェイシャル': 90,
-            '美白・しみしわ・エイジングケアフェイシャル': 90,
-            '【ハーブピーリング】ライト版♪マグマハーブ！': 60,
-            '10回のエステより1回のハーブ☆本気の肌質改善!【ハーブピーリング】お顔': 120,
-            '10回のエステより1回の【ハーブピーリング】☆本気の肌質改善!  ボディ 1ｇ': 90,
-            '両耳10個まで': 60,
-            '両耳つけ放題': 60,
-            '1ヶ月通い放題': 60,
-            '2回目以降': 30,
-            '他メニューと併用￥500オフ': 30,
-            'one color ￥4300': 120,
-            'simple art ￥4800': 120,
-            'ワンカラー¥4800': 120,
-            'シンプルアート¥5300': 120,
-            'parts S ￥150': 0,
-            'parts L ￥250': 0,
-            'design seal ￥150': 0,
-            '長さだし ￥250': 30,
-            'ネイルケア　¥2500': 30,
-            '他店オフ ￥400': 0,
-            'ネイルオフ　¥2,500': 90
+            '男性カット(シャンプー、シェーブ込み)　約75分': 90,
+            '男性カラー(カット、シェーブ込み)　約150分': 150,
+            '男性パーマ(カット、シェーブ込み) 約150分': 150,
+            '子供カット(シャンプー、シェーブ込み)　約60分': 60,
+            'スチームシェービング　約40分': 60,
+            'コアエクササイズ　約50分': 70,
+            'クリアトリートメント　約60分': 90,
+            'リンパケアエステ　約20分': 30,
+            'お顔のコリほぐし 約15分': 30,
+            '成人式シェービング　約60分': 60,
+            '髪質改善トリートメント　約120分': 150,
+            'エリリン　約60分': 60,
+            'ミワリン　約30分': 40,
+            'ミワリンカラー　約90分': 120,
+            'ヒトリン　約180分': 180,
+            'マユリン　約150分': 150,
+            'ヨシリン　約180分': 180,
+            'スパ　約60分': 60,
+            'お顔の凝りほぐし　約20分': 30,
+            'メンズヘッドスパ　約20分': 30
         };
-        
-        let selectedMenuTime = 0;
+
+        // メニューの「提供時間（提）」設定 ＝ お客様に表示する実際の施術時間（所要時間表示用）
+        // ここに無いメニューは menuTimes（全体時間）の値をそのまま表示に使う
+        let menuDisplayTimes = {
+            '男性カット(シャンプー、シェーブ込み)　約75分': 75,
+            '男性カラー(カット、シェーブ込み)　約150分': 150,
+            '男性パーマ(カット、シェーブ込み) 約150分': 150,
+            '子供カット(シャンプー、シェーブ込み)　約60分': 60,
+            'スチームシェービング　約40分': 40,
+            'コアエクササイズ　約50分': 50,
+            'クリアトリートメント　約60分': 60,
+            'リンパケアエステ　約20分': 20,
+            'お顔のコリほぐし 約15分': 15,
+            '成人式シェービング　約60分': 60,
+            '髪質改善トリートメント　約120分': 120,
+            'ミワリン　約30分': 30,
+            'ミワリンカラー　約90分': 90,
+            'お顔の凝りほぐし　約20分': 20,
+            'メンズヘッドスパ　約20分': 20
+        };
+
+        let selectedMenuTime = 0; // 選択メニューの全体時間（全）：カレンダーのブロックに使用
+        let selectedMenuDisplayTime = 0; // 選択メニューの提供時間（提）：所要時間表示に使用
+
+        // メニュー別・曜日別の「最終受付」（予約を開始できる最終時刻）。0時からの経過分で保持。
+        // ※平日＝火〜金（月は定休）／土日＝土・日
+        // ※ gas.gs 側の LAST_ACCEPTANCE_TIMES と必ず一致させること
+        let lastAcceptanceTimes = {
+            mens: {
+                '男性カット(シャンプー、シェーブ込み)　約75分': { weekday: 18 * 60, weekend: 17 * 60 },
+                '男性カラー(カット、シェーブ込み)　約150分': { weekday: 17 * 60, weekend: 16 * 60 + 30 },
+                '男性パーマ(カット、シェーブ込み) 約150分': { weekday: 17 * 60, weekend: 16 * 60 + 30 },
+                '子供カット(シャンプー、シェーブ込み)　約60分': { weekday: 18 * 60, weekend: 17 * 60 }
+            },
+            mensfacial: {
+                'お顔の凝りほぐし　約20分': { weekday: 18 * 60, weekend: 17 * 60 }
+            },
+            menshead: {
+                'メンズヘッドスパ　約20分': { weekday: 18 * 60, weekend: 17 * 60 }
+            },
+            ladies: {
+                'スチームシェービング　約40分': { weekday: 18 * 60, weekend: 17 * 60 },
+                'リンパケアエステ　約20分': { weekday: 18 * 60, weekend: 17 * 60 },
+                'コアエクササイズ　約50分': { weekday: 18 * 60, weekend: 17 * 60 },
+                'お顔のコリほぐし 約15分': { weekday: 18 * 60, weekend: 17 * 60 },
+                '成人式シェービング　約60分': { weekday: 18 * 60, weekend: 17 * 60 },
+                'クリアトリートメント　約60分': { weekday: 18 * 60, weekend: 17 * 60 }
+            },
+            treatment: {
+                'クリアトリートメント　約60分': { weekday: 17 * 60, weekend: 16 * 60 },
+                '髪質改善トリートメント　約120分': { weekday: 17 * 60, weekend: 16 * 60 }
+            },
+            young: {
+                'エリリン　約60分': { weekday: 18 * 60, weekend: 17 * 60 },
+                'ミワリン　約30分': { weekday: 18 * 60, weekend: 17 * 60 },
+                'ミワリンカラー　約90分': { weekday: 17 * 60, weekend: 16 * 60 },
+                'ヒトリン　約180分': { weekday: 17 * 60, weekend: 16 * 60 },
+                'マユリン　約150分': { weekday: 17 * 60, weekend: 16 * 60 },
+                'ヨシリン　約180分': { weekday: 17 * 60, weekend: 16 * 60 },
+                'スパ　約60分': { weekday: 18 * 60, weekend: 17 * 60 }
+            }
+        };
+
+        // 予約タイトルから担当レーンを判定する。
+        // 'hiroyuki'（博之）／'yuki'（由紀・レディース・ヤング等）／'none'（指名なし）。
+        // タイトル内の[ ]ラベルで判定。無印（旧形式「予約: 名前」）は由紀レーン扱い。
+        // 旧形式「予約[メンズ:博之]」等も [ ]内に担当名を含むため同じロジックで判定可能。
+        function laneOfTitle(title) {
+            // 半角[ ]・全角［ ］どちらの角カッコでも判定（手動入力対策）
+            const m = (title || '').match(/予約\s*[\[［]([^\]］]*)[\]］]/);
+            const tag = m ? m[1] : '';
+            if (tag.indexOf('博之') !== -1) return 'hiroyuki';
+            if (tag.indexOf('由紀') !== -1) return 'yuki';
+            if (tag.indexOf('指名なし') !== -1) return 'none';
+            return 'yuki';
+        }
+
+        // 「臨時休業」等の休業マーカーのイベントか判定する。
+        // この種のイベントがその日にあれば、その日は終日・全枠✕にする。
+        // お客様の予約（「予約[...]: 名前」）や「営業日」イベントは休業扱いにしない。
+        // ※ GAS側の isClosedDayTitle() と必ず一致させること。
+        function isClosedDayTitle(title) {
+            const t = (title || '').trim();
+            if (!t) return false;
+            if (t === '営業日') return false;       // 営業日マーカーは対象外
+            if (t.indexOf('予約') === 0) return false; // お客様の予約イベントは対象外
+            const KEYWORDS = ['臨時休業', '休業', '定休', 'お休み', '休み', '休日'];
+            return KEYWORDS.some(function (kw) { return t.indexOf(kw) !== -1; });
+        }
+
+        // 今回選択中の予約が必要とする担当レーンを返す。
+        // 指名欄のあるメニュー（メンズ・メンズヘッドスパ）は selectedShimei に従う。
+        // 指名欄の無いメニュー（レディース・ヤング・トリートメント・メンズフェイシャル）は由紀レーン。
+        function getDesiredLane() {
+            if (selectedShimei && selectedShimei.indexOf('博之') !== -1) return 'hiroyuki';
+            if (selectedShimei && selectedShimei.indexOf('由紀') !== -1) return 'yuki';
+            if (selectedShimei && selectedShimei.indexOf('指名なし') !== -1) return 'either';
+            return 'yuki';
+        }
+
+        // 既存予約タイトルがお部屋利用かどうか（新形式は[ ]内に「部屋」マーカー）
+        function isRoomTitle(title) {
+            return (title || '').indexOf('部屋') !== -1;
+        }
+
+        // 今回選択中の予約がお部屋（ヘッドスパ・レディース・ヤング共用）を使うか。
+        // ヘッドスパ・レディース・ヤングの各メニュー、およびメンズのヘッドスパオプションが対象。
+        function isRoomSelection() {
+            // 複数選択時：メニュー名キーワードで判定（gas.gs の複数選択時判定と一致）
+            if (selectedItems.length > 1) {
+                const hitByName = selectedItems.some(it => ROOM_MENU_KEYWORDS.some(kw => it.name.indexOf(kw) !== -1));
+                if (hitByName) return true;
+                if (irradiationsCount && irradiationsCount.indexOf('ヘッドスパ') !== -1) return true;
+                return false;
+            }
+            // 単一選択時：従来どおりカテゴリ判定（gas.gs の isRoomCourse と一致）
+            if (currentCategory === 'menshead' || currentCategory === 'ladies' || currentCategory === 'young') return true;
+            if (irradiationsCount && irradiationsCount.indexOf('ヘッドスパ') !== -1) return true;
+            return false;
+        }
+
+        // 複数選択時の最終受付（開始できる最終時刻・分）。選択メニューの中で最も早い（最も厳しい）値を採用。
+        // 全カテゴリのバケットを名称で横断検索するため、コース名に依存しない。該当が無ければ null。
+        function getCombinedLastAcceptanceMinutes(names, isWeekend) {
+            let min = null;
+            (names || []).forEach(name => {
+                Object.keys(lastAcceptanceTimes).forEach(cat => {
+                    const entry = lastAcceptanceTimes[cat][name];
+                    if (entry) {
+                        const v = isWeekend ? entry.weekend : entry.weekday;
+                        if (min === null || v < min) min = v;
+                    }
+                });
+            });
+            return min;
+        }
+
+        // 選択中メニューの最終受付（開始できる最終時刻・分）を返す。該当が無ければ null。
+        function getLastAcceptanceMinutes(category, menuLabel, isWeekend) {
+            if (!category || !menuLabel) return null;
+            const byCategory = lastAcceptanceTimes[category];
+            if (!byCategory) return null;
+            const entry = byCategory[menuLabel];
+            if (!entry) return null;
+            return isWeekend ? entry.weekend : entry.weekday;
+        }
+
+        // 選択中メニューのナビ表示エリアを更新する（チップ一覧・×で個別解除）
+        function updateSelectionNav() {
+            const el = document.getElementById('selectionNav');
+            if (!el) return;
+            if (!selectedItems || selectedItems.length === 0) {
+                el.style.display = 'none';
+                el.innerHTML = '';
+                return;
+            }
+            const chips = selectedItems.map(it => {
+                const label = categoryLabel(it.category);
+                return `<span class="sel-chip"><span class="sel-chip-cat">${label}</span>${it.name}<span class="sel-chip-x" title="解除" onclick="removeSelectedItem('${it.id}')">×</span></span>`;
+            }).join('');
+            el.innerHTML = `<div class="sel-nav-title">選択中のメニュー（${selectedItems.length}件）</div><div class="sel-chip-wrap">${chips}</div>`;
+            el.style.display = 'block';
+        }
+
+        // ナビの×から個別のメニュー選択を解除する
+        function removeSelectedItem(id) {
+            const btn = document.querySelector(`.symptoms button[onclick*="'${id}'"]`);
+            if (btn) btn.classList.remove('active');
+            selectedFullDate = '';
+            rebuildSelection();
+            fetchAvailability(currentDate);
+            updateDisplayInfo();
+        }
 
         // 入力内容をローカルストレージに保存
         function saveInput(id) {
@@ -1120,51 +1405,168 @@
             });
         });
 
-        function updateDisplayInfo() {
-            const name = document.getElementById('name').value;
-            const selectedMenuText = selectedMenu ? `<span style="color:#13ca5e;"><strong>【コース】</strong></span><br>・${selectedMenu}` : '・コースが未選択です';
-            const secondanniversaryCountText = secondanniversaryCount ? `<span style="color:#13ca5e;"><strong>【ご来店回数】</strong></span><br>・${secondanniversaryCount}` : '・ご来店回数が未選択です';
-            const selectedSymptomText = selectedSymptom.length > 0
-    ? `<span style="color:#13ca5e;"><strong>【メニュー】</strong></span><br>・${selectedSymptom.map(item => `《${item.category}》${item.name}`).join('<br>・')}`
-    : '・メニューが未選択です';
+        // 選択したメニューを保存
+        function saveMenuSelection(menuType) {
+            localStorage.setItem('selectedMenu', menuType);
+        }
 
-            const irradiationsText = irradiationsCount
-                ? `<span style="color:#13ca5e;"><strong>【オプション】</strong></span><br>・${irradiationsCount.split(', ').join('<br>・')}`
-                : '・オプション無し';
+        // メニューを選択したときにローカルストレージに保存
+        function showMenu(menuType) {
+            document.querySelectorAll('.menu-section').forEach(section => section.style.display = 'none');
+            document.getElementById(menuType).style.display = 'block';
+            saveMenuSelection(menuType);
+        }
 
-            let totalMinutes = selectedMenuTime + selectedirradiationsTime;
-            let hours = Math.floor(totalMinutes / 60);
-            let minutes = totalMinutes % 60;
-            let totalTimeText = `<span style="color:#13ca5e;"><strong>【所要時間】</strong></span><br>・${hours > 0 ? hours + '時間' : ''}${minutes}分`;
+        function applyPreviousSelection() {
+            const savedMenu = localStorage.getItem('selectedMenu') || '';
+            const savedSymptoms = JSON.parse(localStorage.getItem('selectedSymptoms') || '[]');
+            const savedIrradiations = JSON.parse(localStorage.getItem('selectedIrradiations') || '[]');
 
-            const totalAmountText = `<span style="color:#13ca5e;"><strong>【合計金額】</strong></span><br>・¥${menuPrice + optionsPrice}`;
-            const selectedDateText = selectedFullDate ? `<span style="color:#13ca5e;"><strong>【希望日時】</strong></span><br>・${selectedFullDate}` : '・日時が未選択です';
+            if (!savedMenu && savedSymptoms.length === 0 && savedIrradiations.length === 0) {
+                alert('前回のメニューが見つかりません💦');
+                return;
+            }
 
-            // 修正ボタン付きのHTMLを作成
-            document.getElementById('displayInfo').innerHTML = `
+    // ✅ ご来店回数（2回目以降）を自動で選択
+    const repeatVisitButton = document.getElementById('repeatVisit');
+    if (repeatVisitButton) {
+        selectVisit(repeatVisitButton);
+    }
+
+            // ✅ 前回の選択状態を初期化
+            // 1. オプションの active クラスを全て外す
+            document.querySelectorAll('.irradiations button.active').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // 2. selectedIrradiations をリセット
+            localStorage.setItem('selectedIrradiations', JSON.stringify([]));
+
+            // ✅ メニュー表示
+            if (savedMenu) {
+                showMenu(savedMenu);
+            }
+
+            // ✅ メニュー再選択
+            savedSymptoms.forEach(symptomId => {
+                const symptomButton = document.querySelector(`button[onclick*="selectSymptom"][onclick*="'${symptomId}'"]`);
+                if (symptomButton && !symptomButton.classList.contains('active')) {
+                    symptomButton.click();
+                }
+            });
+
+            // ✅ オプション再選択（初期化済なので安心）
+            savedIrradiations.forEach(irradiationId => {
+                const irradiationButton = document.getElementById(irradiationId);
+                if (irradiationButton && !irradiationButton.classList.contains('active')) {
+                    irradiationButton.click();
+                }
+            });
+
+            // ✅ 担当指名の再選択（メンズメニュー・メンズヘッドスパ。表示中のメニューの指名グループ内から復元）
+            const savedShimei = localStorage.getItem('selectedShimei') || '';
+            if (savedShimei && savedMenu) {
+                const section = document.getElementById(savedMenu);
+                if (section) {
+                    const shimeiButton = Array.from(section.querySelectorAll('.shimei-buttons button'))
+                        .find(btn => btn.innerText.trim() === savedShimei.trim());
+                    if (shimeiButton) {
+                        shimeiButton.click(); // selectShimei が active 付与・selectedShimei 設定・表示更新を行う
+                    }
+                }
+            }
+
+            // ✅ ここでカレンダーへスクロール
+            const targetElement = document.getElementById('calendar1');
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+function updateDisplayInfo() {
+    const name = document.getElementById('name').value;
+
+    const labelStyle = "color:#0c0c0c; font-size:14px; border:1px solid #0c0c0c; padding:0px 3px; border-radius:4px;";
+
+    const visitCountText = visitCount
+        ? `<span style="${labelStyle}"><strong>来店回数</strong></span> ${visitCount}`
+        : '・来店回数が未選択です';
+
+    const selectedMenuText = selectedMenu
+        ? `<span style="${labelStyle}"><strong>コース</strong></span> ${selectedMenu}`
+        : '・コースが未選択です';
+
+    // 担当指名の表示（メンズメニュー・メンズヘッドスパの場合のみ）
+    const isShimeiCategory = (currentCategory === 'mens' || currentCategory === 'menshead');
+    const shimeiText = selectedShimei
+        ? `<span style="${labelStyle}"><strong>担当指名</strong></span> ${selectedShimei}`
+        : (isShimeiCategory ? '・担当指名が未選択です' : '');
+
+    const selectedSymptomText = selectedSymptom.length > 0
+        ? `<span style="${labelStyle}"><strong>メニュー</strong></span><br>・${selectedSymptom.join('<br>')}`
+        : '・メニューが未選択です';
+
+    const irradiationsText = irradiationsCount
+        ? `<span style="${labelStyle}"><strong>オプション</strong></span><br>・${irradiationsCount.split(', ').join('<br>・')}`
+        : '・オプション無し';
+
+    // 所要時間はお客様向けの「提供時間（提）」で表示する（カレンダーのブロックは全体時間（全）で別管理）
+    let totalMinutes = selectedMenuDisplayTime + selectedirradiationsTime + selectedVisitTime;
+    let hours = Math.floor(totalMinutes / 60);
+    let minutes = totalMinutes % 60;
+    let totalTimeText = `<span style="${labelStyle}"><strong>所要時間</strong></span> ${hours > 0 ? hours + '時間' : ''}${minutes}分`;
+
+    const selectedDateText = selectedFullDate
+        ? `<span style="${labelStyle}"><strong>希望日時</strong></span> ${selectedFullDate}`
+        : '・日時が未選択です';
+
+    // 担当指名の行を生成（メンズメニュー・メンズヘッドスパ選択時のみ表示）
+    let shimeiRow = '';
+    if (isShimeiCategory || selectedShimei) {
+        // 修正ボタンは現在のカテゴリの指名グループへスクロール
+        const shimeiTargetId = (currentCategory === 'menshead') ? 'shimeiButtonsHead' : 'shimeiButtons';
+        shimeiRow = `
         <div class="info-row">
-            <p><span style="color:#13ca5e;"><strong>【お名前】</strong></span><br>・${name}</p>
-            <button class="edit-button" onclick="scrollToElement('name')">修正する</button>
+            <p>${shimeiText}</p>
+            <button class="edit-button" onclick="scrollToElement('${shimeiTargetId}')">修正</button>
+        </div>
+        <hr>`;
+    }
+
+    // 修正ボタン付きのHTMLを作成
+    document.getElementById('displayInfo').innerHTML = `
+        <div class="info-row">
+            <p><span style="${labelStyle}"><strong>お名前</strong></span> ${name}</p>
+            <button class="edit-button" onclick="scrollToElement('name')">修正</button>
         </div>
         <hr>
         <div class="info-row">
-            <p>${secondanniversaryCountText}</p>
-            <button class="edit-button" onclick="scrollToElement('firstsecondanniversary')">修正する</button>
+            <p>${visitCountText}</p>
+            <button class="edit-button" onclick="scrollToElement('firstVisit')">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedMenuText}</p>
-            <button class="edit-button" onclick="scrollToElement('menuLabel')">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('course')">修正</button>
+        </div>
+        <hr>${shimeiRow}
+        <div class="info-row">
+            <p>${selectedSymptomText}</p>
+            <button class="edit-button" onclick="scrollToElement('mens'); scrollToElement('ladies'); scrollToElement('treatment'); scrollToElement('young'); scrollToElement('mensfacial');">修正</button>
         </div>
         <hr>
         <div class="info-row">
-            <p>${selectedSymptomText}</p>
-            <button class="edit-button" onclick="scrollToElement('male'); scrollToElement('malenew'); scrollToElement('female'); scrollToElement('femalenew'); scrollToElement('eyebrow'); scrollToElement('whiteningmale'); scrollToElement('whiteningfemale'); scrollToElement('limited');">修正する</button>
+            <p>${irradiationsText}</p>
+            <button class="edit-button" onclick="scrollToElement('mens_opt_headspa')">修正</button>
+        </div>
+        <hr>
+        <div class="info-row">
+            <p>${totalTimeText}</p>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedDateText}</p>
-            <button class="edit-button" onclick="scrollToElement('calendar1')">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('calendar1')">修正</button>
         </div>
         <hr>
     `;
@@ -1180,6 +1582,9 @@
 
         // 各ボタンや入力フィールドでupdateDisplayInfoを呼び出すようにする
         document.getElementById('name').addEventListener('input', updateDisplayInfo);
+        document.querySelectorAll('.visit-buttons button').forEach(button => {
+            button.addEventListener('click', updateDisplayInfo);
+        });
         document.querySelectorAll('.menu-sections button').forEach(button => {
             button.addEventListener('click', updateDisplayInfo);
         });
@@ -1221,130 +1626,89 @@
             // 選択された日時をリセット
             selectedFullDate = '';
 
-            // クリックしたボタンの `data-id` を取得
-            let selectedId = button.getAttribute('data-id');
-
-            // クリックしたボタンがすでに `active` なら解除
-            if (button.classList.contains('active')) {
-                button.classList.remove('active');
-            } else {
-                // すでに選択されているボタンを取得（`active` のボタン）
-                let updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
-
-                // もし選択数が3を超えたら、新しい選択をキャンセル
-                if (updatedSelectedButtons.length >= 3) {
-                    return;
-                }
-
-                // クリックしたボタンだけ `active` を付与
-                button.classList.add('active');
-            }
-
-            // 現在選択されているボタンを取得（もう一度更新）
-            let updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
+            const category = button.getAttribute('data-category') || '';
             const treatmentText = document.getElementById('treatment-text');
-            const selectedMenuNameDiv = document.getElementById('selected-menu-name');
 
-            // メニュー時間と価格をリセット
-            selectedMenuTime = 0;
-            selectedSymptom = [];
-            menuPrice = 0;
-
-            if (updatedSelectedButtons.length === 0) {
-                // すべてのボタンの選択が解除された場合
-                selectedMenuTime = 0;
-                selectedSymptom = null;
-                menuPrice = 0;
+            if (isCombinable(category)) {
+                // 組み合わせ可能（レディース・トリートメント・ヤング）：クリックしたボタンをトグルで複数選択。
+                // ただし組み合わせ不可（メンズ等）が選択済みなら、それは解除してから組み合わせ選択に切替える。
+                document.querySelectorAll('.symptoms button.active').forEach(btn => {
+                    const c = btn.getAttribute('data-category') || '';
+                    if (!isCombinable(c)) btn.classList.remove('active');
+                });
+                button.classList.toggle('active');
             } else {
-                // 選択された各ボタンについて処理
-updatedSelectedButtons.forEach((btn) => {
-    const selectedMenuName = btn.textContent;
-    const category = btn.getAttribute('data-category'); // 追加
-    selectedSymptom.push({ category, name: selectedMenuName }); // ← 変更
-    selectedMenuTime += menuTimes[selectedMenuName] || 0;
-    menuPrice += parseInt(btn.getAttribute('data-price'), 10) || 0;
-});
+                // 組み合わせ不可（メンズ・メンズフェイシャル・メンズヘッドスパ）：従来どおり単一選択。
+                const wasActive = button.classList.contains('active');
+                document.querySelectorAll('.symptoms button.active').forEach(btn => btn.classList.remove('active'));
+                if (!wasActive) button.classList.add('active'); // 同じボタン再クリックで解除
             }
 
-            console.log('選択されたメニューの時間:', selectedMenuTime);
+            // treatment-text は非表示のまま（価格情報なし）
+            treatmentText.style.display = 'none';
 
-            // カレンダーを更新するために取得する日付を渡す
+            // 選択状態（selectedItems・合計時間・カテゴリ・コース名・ナビ）を再構築
+            rebuildSelection();
+
+            // カレンダーを更新
             fetchAvailability(currentDate);
 
-            if (treatmentId === 'treatment1') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：90分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：6,500円<br>初診料：＋2,200円</strong></div>`;
-            } else if (treatmentId === 'treatment2') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：60分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：4,500円<br>初診料：＋2,200円</strong></div>`;
-            } else if (treatmentId === 'treatment3') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：120分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：8,700円<br>初診料：＋2,200円</strong></div>`;
-            } else if (treatmentId === 'treatment4') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：30分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円<br>初診料：＋2,200円</strong></div>`;
-            } else if (treatmentId === 'treatment5') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：60分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：6,500円</strong></div>`;
-            } else if (treatmentId === 'treatment6') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：30分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：4,500円</strong></div>`;
-            } else if (treatmentId === 'treatment7') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：90分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：8,700円</strong></div>`;
-            } else if (treatmentId === 'treatment8') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：15分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円</strong></div>`;
-            } else if (treatmentId === 'treatment9') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：15分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円</strong></div>`;
-            } else {
-                treatmentText.innerHTML = '';
-            }
-
-    // 移動させる
-    button.parentNode.insertBefore(document.getElementById("treatment-text"), button.nextSibling);
-
-// メニュー名一覧を表示
-const selectedMenusDisplay = document.getElementById("selected-menus-display");
-if (selectedSymptom && selectedSymptom.length > 0) {
-    const formattedList = selectedSymptom
-        .map(item => `・《${item.category}》${item.name}`)
-        .join('<br>');
-    selectedMenusDisplay.innerHTML = `【選択中のメニュー(最大3つまで)】<br>${formattedList}`;
-    selectedMenusDisplay.style.display = 'block';
-} else {
-    selectedMenusDisplay.innerHTML = '';
-    selectedMenusDisplay.style.display = 'none';
-}
-
-    treatmentText.style.display = 'block';
-
-    updateDisplayInfo();
-}
+            // 表示を更新
+            updateDisplayInfo();
+        }
 
         function selectirradiations(button) {
-            // 選択された日時をリセット
             selectedFullDate = '';
 
-            // ボタンの選択状態を切り替える
+            // トグル（オプション複数選択可）
             button.classList.toggle('active');
 
-            // 選択されたオプションを取得
+            // ✅ 現在アクティブなオプションボタンのみを取得し保存
             const selectedButtons = document.querySelectorAll('.irradiations button.active');
-            const selectedIrradiations = Array.from(selectedButtons).map(btn => btn.innerText);
-            irradiationsCount = selectedIrradiations.join(', ');
+            const selectedIrradiations = Array.from(selectedButtons).map(btn => btn.id);
+            localStorage.setItem('selectedIrradiations', JSON.stringify(selectedIrradiations));
 
-            // すべてのオプションの価格を再計算
-            optionsPrice = 0; // 全体をリセットして再計算
-            let totalirradiationsTime = 0; // 選択されたすべてのオプションの合計時間
+            // 表示用データ生成
+            const selectedIrradiationsNames = Array.from(selectedButtons).map(btn => btn.innerText);
+            irradiationsCount = selectedIrradiationsNames.join(', ');
+
+            // 合計金額など更新
+            optionsPrice = 0;
+            let totalirradiationsTime = 0;
             selectedButtons.forEach(btn => {
                 const price = parseInt(btn.getAttribute('data-price'), 10);
                 optionsPrice += price;
 
-                // 各オプションの時間を加算
                 const irradiationName = btn.innerText;
                 const irradiationTime = irradiationsTimes[irradiationName] || 0;
                 totalirradiationsTime += irradiationTime;
             });
 
-            // selectedirradiationsTimeに合計時間を設定
             selectedirradiationsTime = totalirradiationsTime;
 
-            console.log('選択されたオプションの合計時間:', selectedirradiationsTime);
+            fetchAvailability(currentDate);
+            updateDisplayInfo();
+        }
 
-            // カレンダーを更新するために取得する日付を渡す
+        // 担当指名選択関数（メンズメニュー・メンズヘッドスパ）
+        function selectShimei(button) {
+            // 担当者が変わると空き状況が変わるため、選択中の日時はリセット
+            selectedFullDate = '';
+
+            // 同じ指名グループ（クリックされたボタンの親）の中だけ active を解除
+            const group = button.parentElement;
+            group.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // クリックしたボタンをactiveにする
+            button.classList.add('active');
+
+            // 選択された指名を保存
+            selectedShimei = button.innerText;
+            localStorage.setItem('selectedShimei', selectedShimei); // 「前回と同じメニュー」復元用に保存
+
+            // 選択した担当者基準でカレンダーの◯×を再描画（キャッシュ利用で即時）
             fetchAvailability(currentDate);
 
             // 表示を更新
@@ -1356,94 +1720,105 @@ if (selectedSymptom && selectedSymptom.length > 0) {
             updateDisplayInfo(); // 表示を更新
         }
 
-        function selectsecondanniversary(element) {
-            document.getElementById('firstsecondanniversary').classList.remove('active');
-            document.getElementById('repeatsecondanniversary').classList.remove('active');
-            element.classList.add('active');
-            secondanniversaryCount = element.innerText;
+        function selectVisit(element) {
+            // 選択された日時をリセット
+            selectedFullDate = '';
 
-            document.getElementById('menuLabel').style.display = 'block';
-            document.getElementById('menuSections').style.display = 'flex';
-            document.querySelectorAll('.menu-sections button').forEach(button => {
-                button.style.display = '';
-            });
+            document.getElementById('firstVisit').classList.remove('active');
+            document.getElementById('repeatVisit').classList.remove('active');
+            element.classList.add('active');
+            visitCount = element.innerText;
+
+            // 選択された訪問回数に対応する時間を取得
+            selectedVisitTime = visitTimes[visitCount];
+
+            console.log('選択された訪問回数の時間:', selectedVisitTime);
 
             // カレンダーを更新するために取得する日付を渡す
             fetchAvailability(currentDate);
         }
 
-        function selectDate(cell) {
-            // "unavailable" クラスが付いている場合はクリックを無効化
-            if (cell.classList.contains('unavailable')) {
-                return; // 何もせずに終了
+        // メニューの選択を保存する関数
+        function selectMenu(element) {
+            element.classList.toggle('selected');
+
+            let selectedMenus = JSON.parse(localStorage.getItem('selectedMenus') || '[]');
+            const menuId = element.id;
+
+            if (element.classList.contains('selected')) {
+                selectedMenus.push(menuId);
+            } else {
+                selectedMenus = selectedMenus.filter(id => id !== menuId);
             }
 
-            // 既に選択されているセルの選択を解除
-            const cells = document.querySelectorAll('.calendar td');
-            cells.forEach(td => td.classList.remove('selected'));
+            localStorage.setItem('selectedMenus', JSON.stringify(selectedMenus));
+        }
 
-            // 新しいセルを選択状態にする
-            cell.classList.add('selected');
+        function showMenu(menu) {
+            // treatment-text を非表示にする
+            document.getElementById("treatment-text").style.display = "none";
+            document.getElementById("treatment-text").innerHTML = "";
 
-            // 選択された日付と時間を取得
-            const selectedDay = cell.getAttribute('data-date'); // ISO形式の日付
-            const selectedTime = cell.parentElement.firstChild.textContent; // 時間
-            const date = new Date(selectedDay);
+            // 表示するセクションのボタン（コース名取得用）
+            let selectedButton = document.querySelector(`.menu-sections button[onclick="showMenu('${menu}')"]`);
+            if (selectedButton) {
+                selectedMenu = selectedButton.innerText;
+            }
+            localStorage.setItem('selectedMenu', menu);
 
-            // 日付部分を「○○年○○月○○日 ○○:○○」形式に変換
-            selectedFullDate = `${date.getFullYear()}年${('0' + (date.getMonth() + 1)).slice(-2)}月${('0' + date.getDate()).slice(-2)}日 ${selectedTime}`;
+            // 上部メニューカテゴリボタンのハイライトを付け替え（表示中のカテゴリのみ）
+            document.querySelectorAll('.menu-sections button').forEach(button => {
+                button.classList.remove('active');
+            });
+            if (selectedButton) selectedButton.classList.add('active');
 
-            // 希望日時を即座に更新
+            // セクションの表示切替（active クラスの症状選択は消さない）
+            document.querySelectorAll('.menu-section').forEach(section => {
+                section.style.display = 'none';
+                section.classList.remove('active');
+            });
+            const targetSection = document.getElementById(menu);
+            targetSection.style.display = 'block';
+            targetSection.classList.add('active');
+
+            // リセットするかどうかの判定：
+            //  ・表示先が組み合わせ不可（メンズ等）なら常にリセット
+            //  ・表示先が組み合わせ可でも、組み合わせ不可の選択が残っていればリセット
+            //  ・表示先が組み合わせ可で、既存選択も組み合わせ可のみなら選択を保持（複数カテゴリ横断選択のため）
+            const targetCombinable = isCombinable(menu);
+            const hasNonCombinableSelected = selectedItems.some(it => !isCombinable(it.category));
+
+            if (!targetCombinable || hasNonCombinableSelected) {
+                // メニュー・オプション・指名をすべてリセット
+                document.querySelectorAll('.symptoms button.active, .irradiations button.active').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.shimei-buttons button.active').forEach(btn => btn.classList.remove('active'));
+                irradiationsCount = '';    // オプションのリセット
+                optionsPrice = 0;          // オプションの価格リセット
+                selectedirradiationsTime = 0;
+                totalAmount = 0;           // 合計金額リセット
+                selectedShimei = '';       // 担当指名リセット
+            }
+
+            // 選択された日時はメニュー変更時にリセット
+            selectedFullDate = '';
+
+            // 選択状態（selectedItems・合計時間・カテゴリ・コース名・ナビ）を再構築
+            rebuildSelection();
+
+            // 表示を更新
             updateDisplayInfo();
         }
 
-        function updateTotalAmount() {
-            totalAmount = menuPrice + optionsPrice; // オプションの価格も含める
-            updateDisplayInfo(); // 表示を更新
-        }
-
-
-
-function showMenu(menu) {
-    // `treatment-text` を非表示にする
-    document.getElementById("treatment-text").style.display = "none";
-
-    // 選択されたメニューの名前を取得
-    let selectedButton = document.querySelector(`.menu-sections button[onclick="showMenu('${menu}')"]`);
-    if (selectedButton) {
-        selectedMenu = selectedButton.innerText;
-    }
-
-    // ✅ メニュー切り替えボタンの active 状態をリセット（← これが大事！）
-    document.querySelectorAll('.menu-sections > button').forEach(btn => {
-        btn.classList.remove('active');
-    });
-
-    // ✅ 対象の切り替えボタンに active をつける
-    if (selectedButton) {
-        selectedButton.classList.add('active');
-    }
-
-    // ✅ すべてのメニューセクションの表示状態をリセット
-    document.querySelectorAll('.menu-section').forEach(section => {
-        section.classList.remove('active');
-    });
-
-    // ✅ 対象のメニューセクションを表示
-    document.getElementById(menu).classList.add('active');
-
-    // `treatment-text` の内容リセット
-    document.getElementById("treatment-text").innerHTML = "";
-
-    // メニューとオプションの状態をリセット（必要なら）
-    selectedSymptom = '';
-    irradiationsCount = '';
-    menuPrice = 0;
-    optionsPrice = 0;
-    totalAmount = 0;
-
-    updateDisplayInfo();
-}
+        // ページ読み込み時にローカルストレージから選択状態を復元
+        document.addEventListener("DOMContentLoaded", () => {
+            let selectedMenus = JSON.parse(localStorage.getItem('selectedMenus') || '[]');
+            selectedMenus.forEach(menuId => {
+                let menuButton = document.getElementById(menuId);
+                if (menuButton) {
+                    menuButton.classList.add('selected');
+                }
+            });
+        });
 
         function selectDate(cell) {
             // "unavailable" クラスが付いている場合はクリックを無効化
@@ -1472,10 +1847,11 @@ function showMenu(menu) {
 
         function submitForm() {
             const formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
+                name: document.getElementById('name').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                visitCount: visitCount,
+                selectedMenu: selectedMenu,
                 selectedSymptom: selectedSymptom && selectedSymptom.length > 0 ? selectedSymptom : null, // 空の選択肢をチェック
-                secondanniversaryCount: secondanniversaryCount,
                 irradiationsCount: irradiationsCount,
                 dates: selectedFullDate ? [selectedFullDate] : null, // 空チェック
                 message: document.getElementById('message').value.trim()
@@ -1502,18 +1878,25 @@ function showMenu(menu) {
                 return;
             }
 
-// selectedSymptomを文字列に整形
-const selectedSymptomText = formData.selectedSymptom
-  ? formData.selectedSymptom.map(item => `${item.name}`).join('、')
-  : 'メニュー未選択';
+            // メンズメニューは担当指名が必須
+            if (currentCategory === 'mens' && !selectedShimei) {
+                alert('担当指名を選択してください。');
+                return;
+            }
 
-// irradiationsCountの整形（nullチェック）
-const irradiationsText = formData.irradiationsCount || 'なし';
+            // 担当指名のテキスト（メンズメニューの場合のみ追加）
+            const shimeiLine = selectedShimei ? `\n担当指名：${selectedShimei}` : '';
+
+            // メニュー行（複数選択はカンマ区切り）とオプション行を分離。
+            // ※オプションを別行にするのは、メニュー本体とオプションで名称が重複するメニューがあり、
+            //   1行にまとめると gas.gs 側で時間計算が誤るのを防ぐため。
+            const menuLine = `\nメニュー：${formData.selectedSymptom.join(',')}`;
+            const optionLine = formData.irradiationsCount ? `\nオプション：${formData.irradiationsCount}` : '';
 
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `【予約フォーム】\nお名前：${formData.name}\n電話番号：${formData.phone}\nご来店回数：${formData.secondanniversaryCount}\nメニュー：${selectedSymptomText}\n希望日時：\n ${formData.dates[0]}\nメッセージ：${formData.message}`
+                text: `【予約フォーム】\nお名前：${formData.name}\n電話番号：${formData.phone}\nご来店回数：${formData.visitCount}\nコース：${formData.selectedMenu}${shimeiLine}${menuLine}${optionLine}\n希望日時：\n ${formData.dates[0]}\nメッセージ：${formData.message}`
             }]).then(() => {
                 /* メッセージ送信成功時の処理 */
                 alert('当日キャンセルは無いようにお願いいたします。');
@@ -1524,63 +1907,94 @@ const irradiationsText = formData.irradiationsCount || 'なし';
                 console.error('メッセージの送信に失敗しました', err);
             });
         }
+
         function formatDate(dateStr) {
             if (!dateStr) return '';
             const date = new Date(dateStr);
             return `${date.getFullYear()}年${('0' + (date.getMonth() + 1)).slice(-2)}月${('0' + date.getDate()).slice(-2)}日 ${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}`;
         }
 
-async function fetchAvailability(date, forceReload = false) {
-    const startTime = new Date(date);
-    const endTime = new Date(date);
-    endTime.setDate(endTime.getDate() + 7);
+        async function fetchAvailability(date) {
+            // 描画基準日を確定（描画はグローバルの currentDate ではなくこの日付に従う）
+            const refDate = new Date(date);
+            const startTime = new Date(date);
+            const endTime = new Date(date);
+            endTime.setDate(endTime.getDate() + 7);
 
-    const cacheKey = startTime.toISOString() + endTime.toISOString();
+            const cacheKey = startTime.toISOString() + endTime.toISOString();
 
-    // 強制再読み込みでない場合のみキャッシュを使う
-    if (!forceReload && availabilityCache[cacheKey]) {
-        console.log('Using cached data');
-        updateCalendar(availabilityCache[cacheKey].availability, availabilityCache[cacheKey].businessDays);
-        return;
-    }
+            // このフェッチのリクエストIDを採番（古いレスポンスの上書きを防ぐ）
+            const requestId = ++latestRequestId;
 
-    // URL
-    let baseURL = 'https://script.google.com/macros/s/AKfycbwRi5LfxSmLoOuYYd44oACmo1Y0DcnlVYYYke8DH3j6r09spdZip-drG05ctxFzcrbQoQ/exec';
+            // キャッシュを確認（取得済みなら即時・同期で描画）
+            if (availabilityCache[cacheKey]) {
+                console.log('Using cached data');
+                updateCalendar(availabilityCache[cacheKey].availability, availabilityCache[cacheKey].businessDays, refDate);
+                return;
+            }
 
-    const url = `${baseURL}?startTime=${startTime.toISOString()}&endTime=${endTime.toISOString()}`;
+            // 同じ週へのリクエストが既に飛んでいれば、その通信を共有する。
+            // （メニュー・訪問回数・オプション選択などで fetchAvailability が連続して呼ばれても、
+            //  ネットワーク呼び出しは1回だけにし、待ち時間を短縮する）
+            let fetchPromise = inFlightFetches[cacheKey];
+            if (!fetchPromise) {
+                const url = 'https://script.google.com/macros/s/AKfycbzr3bAMCTs5bwoZAtuU73u_iIl91kHnoVQvxngI-xIHwgvoCAGAcIfOUtlWlU2RRyMw/exec' +
+                    `?startTime=${startTime.toISOString()}&endTime=${endTime.toISOString()}`;
 
-    try {
-        showLoadingSpinner();
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log(data);
+                fetchPromise = (async () => {
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    console.log(data);
 
-        const businessDays = data.filter(event => event.summary === "営業日").map(event => {
-            return {
-                start: new Date(event.startTime),
-                end: new Date(event.endTime)
-            };
-        });
+                    // 営業日の情報を抽出
+                    const businessDays = data.filter(event => event.summary === "営業日").map(event => {
+                        return {
+                            start: new Date(event.startTime),
+                            end: new Date(event.endTime)
+                        };
+                    });
 
-        availabilityCache[cacheKey] = { availability: data, businessDays: businessDays };
-        updateCalendar(data, businessDays);
-    } catch (error) {
-        console.error('Error fetching availability:', error);
-    } finally {
-        hideLoadingSpinner();
-    }
-}
+                    // データをキャッシュに保存
+                    availabilityCache[cacheKey] = { availability: data, businessDays: businessDays };
+                    return availabilityCache[cacheKey];
+                })();
 
-        function updateCalendar(availability, businessDays) {
+                inFlightFetches[cacheKey] = fetchPromise;
+                // 完了後はin-flight管理から外す（成功・失敗どちらでも）
+                fetchPromise.catch(() => {}).then(() => { delete inFlightFetches[cacheKey]; });
+            }
+
+            try {
+                showLoadingSpinner(); // Show loading spinner
+                const result = await fetchPromise;
+
+                // より新しいフェッチが後から飛んでいたら、この古い結果では描画しない
+                if (requestId !== latestRequestId) {
+                    console.log('Stale response ignored');
+                    return;
+                }
+
+                updateCalendar(result.availability, result.businessDays, refDate);
+            } catch (error) {
+                console.error('Error fetching availability:', error);
+            } finally {
+                hideLoadingSpinner(); // Hide loading spinner
+            }
+        }
+
+        function updateCalendar(availability, businessDays, refDate) {
+            // refDate が渡されない場合は従来どおりグローバルの currentDate を使用
+            if (!refDate) refDate = new Date(currentDate);
             const calendar = document.getElementById('calendar1');
             const table = calendar.querySelector('table tbody');
 
+            // 30分間隔で09:00〜18:00
             const times = [
-                '10:00', '10:30', '11:00', '11:30',
+                '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
                 '12:00', '12:30', '13:00', '13:30',
                 '14:00', '14:30', '15:00', '15:30',
                 '16:00', '16:30', '17:00', '17:30',
-                '18:00', '18:30', '19:00', '19:30', '20:00'
+                '18:00', '18:30'
             ];
 
             if (table.rows.length === 0) {
@@ -1601,7 +2015,7 @@ async function fetchAvailability(date, forceReload = false) {
             }
 
             // テーブルのヘッダーを更新
-            updateCalendarHeader(currentDate);
+            updateCalendarHeader(refDate);
 
             // 各セルを空白にリセットし、クラスもリセット
             for (let row of table.rows) {
@@ -1612,22 +2026,36 @@ async function fetchAvailability(date, forceReload = false) {
                 }
             }
 
-
             // 現在の日時を取得
             const now = new Date();
 
+            // 3ヶ月後の日付を計算（3ヶ月内しか予約できない制限）
+            const threeMonthsLater = new Date();
+            threeMonthsLater.setMonth(threeMonthsLater.getMonth() + 3);
+
             // テーブルの内容を更新
             for (let i = 0; i < 7; i++) {
-                const day = new Date(currentDate);
+                const day = new Date(refDate);
                 day.setDate(day.getDate() + i);
 
                 let businessEventTimes = []; // 営業日のイベント時間帯を記録する配列
+                let closedRanges = [];       // 休業マーカーの時間帯（部分休業はその時間帯のみ、終日休業は全枠に重なる）
+
+                // その日の範囲（休業イベントが当日に重なるか判定するため）
+                const dayStart = new Date(day); dayStart.setHours(0, 0, 0, 0);
+                const dayEnd = new Date(day); dayEnd.setHours(23, 59, 59, 999);
 
                 availability.forEach(slot => {
                     const eventStart = new Date(slot.startTime);
                     const eventEnd = new Date(slot.endTime);
                     if (eventStart.toDateString() === day.toDateString() && slot.title === "営業日") {
                         businessEventTimes.push({ start: eventStart, end: eventEnd });
+                    }
+                    // 休業マーカーのイベントは、その時間帯に重なる枠だけ✕にする。
+                    // 終日イベント（臨時休業など）は全枠に重なるため終日✕、
+                    // 時間帯付き（例：17:30-23:30の「休み」）はその時間帯の枠だけ✕になる。
+                    if (isClosedDayTitle(slot.title) && eventStart < dayEnd && dayStart < eventEnd) {
+                        closedRanges.push({ start: eventStart, end: eventEnd });
                     }
                 });
 
@@ -1644,10 +2072,19 @@ async function fetchAvailability(date, forceReload = false) {
 
                     const slotEnd = new Date(slotStart);
                     let menuDuration = selectedMenuTime || 10;
+                    let visitDuration = selectedVisitTime || 0;
                     let irradiationsDuration = selectedirradiationsTime || 0;
 
-                    // メニュー時間とオプション時間を合計して、終了時間を設定
-                    slotEnd.setMinutes(slotStart.getMinutes() + menuDuration + irradiationsDuration);
+                    // メニュー時間と訪問回数の時間を合計して、終了時間を設定
+                    slotEnd.setMinutes(slotStart.getMinutes() + menuDuration + visitDuration + irradiationsDuration);
+
+                    // 休業マーカーの時間帯に重なる枠は✕（部分休業対応：終日休業は全枠、時間帯付きはその時間のみ）
+                    const overlapsClosed = closedRanges.some(r => slotStart < r.end && r.start < slotEnd);
+                    if (overlapsClosed) {
+                        cell.textContent = '✕';
+                        cell.classList.add('unavailable');
+                        continue;
+                    }
 
                     // 終了時間が翌日 (0時以降) になる場合は✕に設定
                     if (slotEnd.getDate() !== slotStart.getDate()) {
@@ -1656,20 +2093,47 @@ async function fetchAvailability(date, forceReload = false) {
                         continue;
                     }
 
-                    // 18時以降に終了する予約を不可にする (17:30は可)
-                    if (slotEnd.getHours() === 20 && slotEnd.getMinutes() > 0) {
-                        cell.textContent = '✕';
-                        cell.classList.add('unavailable');
-                        continue;
-                    } else if (slotEnd.getHours() > 20) {
+                    // 受付終了（最終受付）判定
+                    // メニュー別の最終受付があれば「開始時刻が最終受付を過ぎたら不可」、
+                    // 無ければ従来どおり「施術終了が閉店時刻(平日18:30/土日18:00)を過ぎたら不可」
+                    const isWeekend = (slotStart.getDay() === 0 || slotStart.getDay() === 6);
+                    const defaultClosingMinutes = isWeekend ? (18 * 60) : (18 * 60 + 30); // 土日:18:00 / 平日:18:30
+                    const slotStartMinutes = slotStart.getHours() * 60 + slotStart.getMinutes();
+                    const slotEndMinutes = slotEnd.getHours() * 60 + slotEnd.getMinutes();
+                    const selMenuLabel = (Array.isArray(selectedSymptom) && selectedSymptom.length > 0) ? selectedSymptom[0] : '';
+                    // 複数選択時は選択メニューの中で最も早い最終受付を採用。単一選択時は従来どおりカテゴリ判定。
+                    const lastStartMinutes = (selectedItems.length > 1)
+                        ? getCombinedLastAcceptanceMinutes(selectedItems.map(it => it.name), isWeekend)
+                        : getLastAcceptanceMinutes(currentCategory, selMenuLabel, isWeekend);
+                    if (lastStartMinutes != null) {
+                        if (slotStartMinutes > lastStartMinutes) {
+                            cell.textContent = '✕';
+                            cell.classList.add('unavailable');
+                            continue;
+                        }
+                    } else if (slotEndMinutes > defaultClosingMinutes) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
                         continue;
                     }
 
-                    // ここで終了時間を使った条件処理を行う
-                    // 例えば、リアルタイムで既に過ぎた時間帯は×にする
-                    if (slotStart < now) {
+                    // 予約は希望時刻の6時間前まで。6時間以内・過去の時間帯は×にする。
+                    const SIX_HOURS_MS = 6 * 60 * 60 * 1000;
+                    if (slotStart.getTime() - now.getTime() < SIX_HOURS_MS) {
+                        cell.textContent = '✕';
+                        cell.classList.add('unavailable');
+                        continue;
+                    }
+
+                    // 3ヶ月以上先の場合は×にする
+                    if (slotStart > threeMonthsLater) {
+                        cell.textContent = '✕';
+                        cell.classList.add('unavailable');
+                        continue;
+                    }
+
+                    // 月曜日は定休日のため✕にする
+                    if (slotStart.getDay() === 1) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
                         continue;
@@ -1681,26 +2145,58 @@ async function fetchAvailability(date, forceReload = false) {
                         return slotStart >= businessDayStart && slotEnd <= businessDayEnd;
                     });
 
+                    // 受付内判定に使う基準時刻。最終受付があればその時刻（開始時刻 <= 最終受付 を許可）、
+                    // 無ければ閉店時刻（平日18:30 / 土日18:00）を受付終了として扱う。
+                    const closingRefMinutes = (lastStartMinutes != null) ? (lastStartMinutes + 1) : defaultClosingMinutes;
+                    const closingTime = new Date(day);
+                    closingTime.setHours(Math.floor(closingRefMinutes / 60), closingRefMinutes % 60, 0, 0);
+
                     const isBusinessEventTime = businessEventTimes.some(event => {
-                        return slotStart < event.end && event.start < slotEnd;
+                        // 開始（開店）は営業日イベントに従い、終了（受付終了）はHTMLの受付終了時間で判断する
+                        return slotStart < closingTime && event.start < slotEnd;
                     });
 
-                    const count = availability.reduce((acc, slot) => {
+                    // 重なっている既存予約（営業日イベントを除く）
+                    const existingSlots = availability.filter(slot => {
                         const eventStart = new Date(slot.startTime);
                         const eventEnd = new Date(slot.endTime);
+                        return eventStart < slotEnd && slotStart < eventEnd && slot.title !== "営業日";
+                    });
+                    const count = existingSlots.length;
 
-                        if (eventStart < slotEnd && slotStart < eventEnd && slot.title !== "営業日") {
-                            return acc + 1;
-                        }
-                        return acc;
-                    }, 0);
+                    // 既存予約を担当レーン（博之／由紀／指名なし）に分類
+                    let laneH = 0, laneY = 0, laneN = 0;
+                    existingSlots.forEach(slot => {
+                        const lane = laneOfTitle(slot.title);
+                        if (lane === 'hiroyuki') laneH++;
+                        else if (lane === 'none') laneN++;
+                        else laneY++; // 由紀（レディース・ヤング・由紀指名・無印を含む）
+                    });
+
+                    // 今回の予約が必要とするレーン
+                    const desiredLane = getDesiredLane();
+
+                    // カレンダー表示上の◯/✕判定（2レーン制：博之・由紀）
+                    // 博之指名：博之レーンが空き かつ 合計2件未満
+                    // 由紀/レディース/ヤング：由紀レーンが空き かつ 合計2件未満
+                    // 指名なし：合計2件未満ならどちらかのレーンで可
+                    let canShow;
+                    if (desiredLane === 'hiroyuki') canShow = (laneH === 0 && count < 2);
+                    else if (desiredLane === 'yuki') canShow = (laneY === 0 && count < 2);
+                    else canShow = (count < 2);
+
+                    // お部屋（ヘッドスパ・レディース・ヤング共用）は担当に関わらず同時1件まで
+                    if (canShow && isRoomSelection()) {
+                        const roomCount = existingSlots.filter(slot => isRoomTitle(slot.title)).length;
+                        if (roomCount > 0) canShow = false;
+                    }
 
                     // 営業日のイベント時間内に他のイベントがある場合
-                    if (isBusinessEventTime && count > 0) {
+                    if (isBusinessEventTime && !canShow) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
                     }
-                    // 営業日のイベント時間（他のイベントがない場合）
+                    // 営業日のイベント時間（枠に空きがある場合）
                     else if (isBusinessEventTime) {
                         cell.textContent = '◯';
                         cell.classList.add('available');
@@ -1710,13 +2206,24 @@ async function fetchAvailability(date, forceReload = false) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
                     }
+                    // 日曜日で、営業日ではない場合（祝日営業ありなので日曜も営業）
+                    else if (slotStart.getDay() === 0 && !isBusinessDay && businessEventTimes.length === 0) {
+                        // 祝日営業ありなので日曜も通常通り表示
+                        if (!canShow) {
+                            cell.textContent = '✕';
+                            cell.classList.add('unavailable');
+                        } else {
+                            cell.textContent = '◯';
+                            cell.classList.add('available');
+                        }
+                    }
                     // 営業日でかつ他のイベントがない場合
                     else if (isBusinessDay && count === 0) {
                         cell.textContent = '◯';
                         cell.classList.add('available');
                     }
                     // それ以外の条件
-                    else if (count <= 0) {
+                    else if (canShow) {
                         cell.textContent = '◯';
                         cell.classList.add('available');
                     } else {
@@ -1733,7 +2240,7 @@ async function fetchAvailability(date, forceReload = false) {
             const headerRow = document.getElementById('calendar-header');
             const headers = headerRow.querySelectorAll('th:not(:first-child)');
 
-            // サンプルの祝日データ（必要に応じて動的に取得も検討）
+            // 祝日データ
             const holidays = [
                 '2025-02-11', // 建国記念の日
                 '2025-02-23', // 天皇誕生日
@@ -1818,7 +2325,7 @@ async function fetchAvailability(date, forceReload = false) {
                 // 祝日を赤色に変更（曜日判定ではなく完全一致判定）
                 if (holidays.includes(formattedDate)) {
                     th.style.color = 'red';
-                } else if (day.getDay() === 0) { // 日曜日（赤）
+                } else if (day.getDay() === 0 || day.getDay() === 1) { // 日・月曜日（赤）
                     th.style.color = 'red';
                 } else if (day.getDay() === 6) { // 土曜日（青）
                     th.style.color = 'blue';
